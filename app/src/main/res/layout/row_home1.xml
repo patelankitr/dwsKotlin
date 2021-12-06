@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="home1RowModel" type="com.application.app.modules.home.data.model.Home1RowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearGroup"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyledeep_orange_500_5ecornerRadius">
+        <LinearLayout android:id="@+id/linearGroup104"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_18pxv"
+            android:layout_marginTop="@dimen/_18pxv"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageView android:id="@+id/image2Friends"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_18pxh"
+                android:layout_marginBottom="@dimen/_3pxv"
+                android:layout_marginStart="@dimen/_28pxh"
+                android:layout_marginTop="@dimen/_3pxv"
+                android:layout_width="@dimen/_20pxh"
+                android:scaleType="fitXY" android:src="@drawable/img_2friends"/>
+            <TextView android:gravity="center"
+                android:id="@+id/txtPersonality"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_61pxh"
+                android:layout_weight="0.9" android:layout_width="0dp"
+                android:text="@{home1RowModel.txtPersonality}"
+                style="@style/txtPoppinsmedium16" tools:text="@string/lbl_personality"/>
+            <ImageView android:id="@+id/imageStroke1"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_6pxh"
+                android:layout_marginBottom="@dimen/_9pxv"
+                android:layout_marginEnd="@dimen/_33pxh"
+                android:layout_marginStart="@dimen/_74pxh"
+                android:layout_marginTop="@dimen/_9pxv"
+                android:layout_width="@dimen/_5pxh"
+                android:scaleType="fitXY" android:src="@drawable/img_stroke1"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

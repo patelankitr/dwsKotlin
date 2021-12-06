@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="homeVM" type="com.application.app.modules.home.data.viewmodel.HomeVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearHome"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imageProfileimage"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_139pxh"
+            android:layout_marginEnd="@dimen/_118pxh"
+            android:layout_marginStart="@dimen/_118pxh"
+            android:layout_marginTop="@dimen/_79pxv"
+            android:layout_width="@dimen/_139pxh"
+            android:scaleType="fitXY" circular="@{true}"
+            imageRes="@{@drawable/img_profileimage}" tools:src="@drawable/img_profileimage"/>
+        <LinearLayout android:id="@+id/linearProfiledetails"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_86pxh"
+            android:layout_marginStart="@dimen/_82pxh"
+            android:layout_marginTop="@dimen/_6pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <TextView android:alpha="0.8" android:gravity="top|center"
+                android:id="@+id/txtAdalah"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_53pxh"
+                android:layout_marginStart="@dimen/_55pxh"
+                android:layout_marginTop="@dimen/_8pxv"
+                android:layout_width="wrap_content"
+                android:text="@{homeVM.homeModel.txtAdalah}"
+                style="@style/txtPoppinssemibold20" tools:text="@string/lbl_adalah"/>
+            <TextView android:alpha="0.4" android:gravity="center"
+                android:id="@+id/txtAlcanasatre"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_30pxh"
+                android:layout_marginStart="@dimen/_31pxh"
+                android:layout_width="match_parent"
+                android:text="@{homeVM.homeModel.txtAlcanasatre}"
+                style="@style/txtPoppinsregular18" tools:text="@string/lbl_alcanasatre"/>
+            <TextView android:alpha="0.6" android:gravity="top|center"
+                android:id="@+id/txtJoined6Month"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_26pxv"
+                android:layout_marginEnd="@dimen/_36pxh"
+                android:layout_marginStart="@dimen/_37pxh"
+                android:layout_marginTop="@dimen/_14pxv"
+                android:layout_width="wrap_content"
+                android:text="@{homeVM.homeModel.txtJoined6Month}"
+                style="@style/txtPoppinsregular10" tools:text="@string/msg_joined_6_month"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerOptions"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_239pxv"
+            android:layout_marginTop="@dimen/_23pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            itemSpace="@{@dimen/_13pxh}" tools:itemCount="3" tools:listitem="@layout/row_home1"/>
+    </LinearLayout>
+</layout>
