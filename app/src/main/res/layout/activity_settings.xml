@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="settingsVM" type="com.application.app.modules.settings.data.viewmodel.SettingsVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSettings"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imageBack"
+            android:layout_gravity="start"
+            android:layout_height="@dimen/_60pxh"
+            android:layout_marginEnd="@dimen/_32pxh"
+            android:layout_marginStart="@dimen/_32pxh"
+            android:layout_marginTop="@dimen/_37pxv"
+            android:layout_width="@dimen/_67pxh"
+            android:scaleType="fitXY" android:src="@drawable/img_back"/>
+        <LinearLayout android:id="@+id/linearSetting"
+            android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_32pxh"
+            android:layout_marginStart="@dimen/_32pxh"
+            android:layout_marginTop="@dimen/_60pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <TextView android:alpha="0.8" android:gravity="start"
+                android:id="@+id/txtSettings"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{settingsVM.settingsModel.txtSettings}"
+                style="@style/txtPoppinssemibold28" tools:text="@string/lbl_settings"/>
+            <TextView android:alpha="0.4" android:gravity="start"
+                android:id="@+id/txtYourSettingsS"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12pxv"
+                android:layout_width="match_parent"
+                android:text="@{settingsVM.settingsModel.txtYourSettingsS}"
+                style="@style/txtPoppinsmedium12" tools:text="@string/msg_your_settings_s"/>
+        </LinearLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:clickable="true"
+            android:id="@+id/cardViewBackground"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_32pxh"
+            android:layout_marginStart="@dimen/_32pxh"
+            android:layout_marginTop="@dimen/_34pxv"
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="@color/gray_50"
+            app:cardCornerRadius="@dimen/_14pxh"
+            app:cardElevation="@dimen/_1pxh"
+            app:cardUseCompatPadding="true" style="@style/groupStylegray_50cornerRadius">
+            <LinearLayout android:id="@+id/linearPersonality"
+                android:layout_gravity="center"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_21pxv"
+                android:layout_marginTop="@dimen/_21pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:alpha="0.6" android:gravity="center"
+                    android:id="@+id/txtPersonality"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_122pxh"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:text="@{settingsVM.settingsModel.txtPersonality}"
+                    style="@style/txt" tools:text="@string/lbl_personality"/>
+                <ImageView android:id="@+id/imageArrow"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_6pxh"
+                    android:layout_marginBottom="@dimen/_6pxv"
+                    android:layout_marginEnd="@dimen/_28pxh"
+                    android:layout_marginStart="@dimen/_91pxh"
+                    android:layout_marginTop="@dimen/_6pxv"
+                    android:layout_width="@dimen/_3pxh"
+                    android:scaleType="fitXY" android:src="@drawable/img_arrow"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <FrameLayout android:id="@+id/frameLanguage"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_32pxh"
+            android:layout_marginStart="@dimen/_32pxh"
+            android:layout_marginTop="@dimen/_14pxv"
+            android:layout_width="match_parent" style="@style/groupStyle">
+            <com.google.android.material.card.MaterialCardView
+                android:clickable="true"
+                android:id="@+id/cardViewBackground1"
+                android:layout_gravity="center"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                app:cardBackgroundColor="@color/gray_50"
+                app:cardCornerRadius="@dimen/_14pxh"
+                app:cardElevation="@dimen/_1pxh"
+                app:cardUseCompatPadding="true" style="@style/groupStylegray_50cornerRadius">
+                <LinearLayout android:id="@+id/linearLanguage"
+                    android:layout_gravity="center"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_21pxv"
+                    android:layout_marginTop="@dimen/_21pxv"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:alpha="0.6"
+                        android:gravity="center"
+                        android:id="@+id/txtLanguage"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_126pxh"
+                        android:layout_weight="0.4"
+                        android:layout_width="0dp"
+                        android:text="@{settingsVM.settingsModel.txtLanguage}"
+                        style="@style/txt" tools:text="@string/lbl_language"/>
+                    <ImageView android:id="@+id/imageArrow1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_6pxh"
+                        android:layout_marginBottom="@dimen/_6pxv"
+                        android:layout_marginEnd="@dimen/_28pxh"
+                        android:layout_marginStart="@dimen/_93pxh"
+                        android:layout_marginTop="@dimen/_6pxv"
+                        android:layout_width="@dimen/_3pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_arrow"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </FrameLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:clickable="true"
+            android:id="@+id/cardViewBackground2"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_32pxh"
+            android:layout_marginStart="@dimen/_32pxh"
+            android:layout_marginTop="@dimen/_14pxv"
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="@color/gray_50"
+            app:cardCornerRadius="@dimen/_14pxh"
+            app:cardElevation="@dimen/_1pxh"
+            app:cardUseCompatPadding="true" style="@style/groupStylegray_50cornerRadius">
+            <LinearLayout android:id="@+id/linearTermandcondit"
+                android:layout_gravity="center"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_21pxv"
+                android:layout_marginTop="@dimen/_21pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:alpha="0.6" android:gravity="center"
+                    android:id="@+id/txtTermsAndCondi"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_88pxh"
+                    android:layout_weight="0.9"
+                    android:layout_width="0dp"
+                    android:text="@{settingsVM.settingsModel.txtTermsAndCondi}"
+                    style="@style/txt" tools:text="@string/msg_terms_and_condi"/>
+                <ImageView android:id="@+id/imageArrow2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_6pxh"
+                    android:layout_marginBottom="@dimen/_6pxv"
+                    android:layout_marginEnd="@dimen/_28pxh"
+                    android:layout_marginStart="@dimen/_58pxh"
+                    android:layout_marginTop="@dimen/_6pxv"
+                    android:layout_width="@dimen/_3pxh"
+                    android:scaleType="fitXY" android:src="@drawable/img_arrow"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <androidx.appcompat.widget.AppCompatButton
+            android:gravity="center" android:id="@+id/btnLogOut"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_106pxv"
+            android:layout_marginEnd="@dimen/_32pxh"
+            android:layout_marginStart="@dimen/_32pxh"
+            android:layout_marginTop="@dimen/_177pxv"
+            android:layout_width="match_parent"
+            android:text="@string/lbl_log_out"
+            android:textAllCaps="false"
+            style="@style/btnSolidRoundedOutline" tools:text="@string/lbl_log_out"/>
+    </LinearLayout>
+</layout>

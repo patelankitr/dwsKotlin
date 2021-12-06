@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="workToday1RowModel" type="com.application.app.modules.worktoday.data.model.WorkToday1RowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearGroup"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700_7e">
+        <LinearLayout android:id="@+id/linearGroup96"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_15pxv"
+            android:layout_marginTop="@dimen/_15pxv"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <View
+                android:background="@drawable/rectangle_bg_deep_orange_500_6c_radius_6"
+                android:id="@+id/viewStatuscolor"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_26pxh"
+                android:layout_marginStart="@dimen/_28pxh" android:layout_width="@dimen/_28pxh"/>
+            <TextView android:gravity="top|start"
+                android:id="@+id/txtResearchProduc"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_2pxv"
+                android:layout_marginStart="@dimen/_24pxh"
+                android:layout_marginTop="@dimen/_3pxv"
+                android:layout_weight="1.7" android:layout_width="0dp"
+                android:text="@{workToday1RowModel.txtResearchProduc}"
+                style="@style/txtPoppinsregular14" tools:text="@string/msg_research_produc"/>
+            <ImageView android:id="@+id/imageArrowIcon"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_5pxh"
+                android:layout_marginBottom="@dimen/_10pxv"
+                android:layout_marginEnd="@dimen/_27pxh"
+                android:layout_marginStart="@dimen/_29pxh"
+                android:layout_marginTop="@dimen/_10pxv"
+                android:layout_width="@dimen/_3pxh"
+                android:scaleType="fitXY" android:src="@drawable/img_arrowicon"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
